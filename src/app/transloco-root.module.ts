@@ -8,6 +8,7 @@ import {
   TranslocoModule
 } from '@ngneat/transloco';
 import { Injectable, isDevMode, NgModule } from '@angular/core';
+import { environment } from 'src/environments/environment.base';
 
 
 @Injectable({ providedIn: 'root' })
@@ -15,7 +16,7 @@ export class TranslocoHttpLoader implements TranslocoLoader {
   constructor(private http: HttpClient) {}
 
   getTranslation(lang: string) {
-    return this.http.get<Translation>(`/assets/i18n/${lang}.json`);
+    return this.http.get<Translation>(`${environment.TRANSLATE_URL}${lang}.json`);
   }
 }
 
