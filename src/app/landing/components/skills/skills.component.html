@@ -1,0 +1,95 @@
+<div class="app-skills" *ngIf="template">
+  <div class="app-skills__container">
+    <article class="app-skills__container-art" [ngClass]="{'active': pageActive === 'notes'}">
+      <app-lettering [subtitle]="template['title']"></app-lettering>
+      <br />
+      <p href="" class="app-skills__container-art-paragraph">
+        <span
+          [class]="
+            'app-skills__container-art-paragraph-each animate__animated animate__backInUp delay-' +
+            i
+          "
+          *ngFor="let item of paragraphs; let i = index"
+        >
+          {{ item }}
+          <br />
+          <br />
+        </span>
+      </p>
+    </article>
+    <article class="app-skills__container-art" [ngClass]="{'active': pageActive === 'description'}">
+      <div class="app-skills__container-art-controls">
+        <button
+          class="app-skills__container-art-controls-control ctr-r"
+          (click)="nextControl('>')"
+        >
+          {{ ">" }}
+        </button>
+        <button
+          class="app-skills__container-art-controls-control ctr-l"
+          (click)="nextControl('<')"
+        >
+          {{ "<" }}
+        </button>
+      </div>
+
+      <div class="app-skills__container-art-notes" id="notes" [ngClass]="{'active': true}" #notes>
+        <app-lettering [subtitle]="'experiences'" size="s"></app-lettering>
+        <div class="app-skills__container-art-notes-container">
+          <div
+            [class]="'app-skills__container-art-notes-container-note delay-' + i"
+            *ngFor="let note of experiences; let i = index"
+          >
+            <h3 class="app-skills__container-art-notes-container-note-job">
+              {{ note.job }}
+            </h3>
+            <br />
+            <p class="app-skills__container-art-notes-container-note-company">
+              <span>
+                {{ note.company }}
+              </span>
+              <br />
+              <i
+                class="app-skills__container-art-notes-container-note-company-years"
+                >{{ note.years }}</i
+              >
+            </p>
+            <br />
+            <p
+              class="app-skills__container-art-notes-container-note-description"
+            >
+              {{ note.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <app-gallery-notes [experiences]="experiences"></app-gallery-notes> -->
+
+      <div class="app-skills__container-art-skills">
+        <app-lettering subtitle="skills" size="s"></app-lettering>
+        <div class="app-skills__container-art-skills-container">
+            <div class="app-skills__container-art-skills-container-tabs">
+              <button class="app-skills__container-art-skills-container-tabs-tab" *ngFor="let tab of tabs" [ngClass]="{'active': tabActive === tab}" (click)="setTab(tab)">{{tab}}</button>
+            </div>
+          <div
+            class="app-skills__container-art-skills-container-skill"
+            *ngFor="let skill of skills; let i = index"
+          >
+            <p class="app-skills__container-art-skills-container-skill-name">
+              {{ skill.name }}
+            </p>
+            <div
+              [class]="'app-skills__container-art-skills-container-skill-bar delay-' + i"
+              [attr.status]="skill.status + ' (' + skill.years + ' años)'"
+              [style]="'--level: ' + (skill.level / 4) * 100 + '%'"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="app-skills__container-next" (click)="changePage()" [title]="template.next">
+    <mat-icon fontSize="large">arrow_forward_ios</mat-icon>
+  </div>
+</div>

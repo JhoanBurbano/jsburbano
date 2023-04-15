@@ -1,0 +1,58 @@
+@import '../../../../styles.scss';
+
+.app-documents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__container {
+        width: 800px;
+        height: 700px;
+        background: $gray_d;
+        border-radius: .5em;
+        box-shadow: 0 0 20px $black_o;
+        &-paragraphs {
+            text-align: center;
+        }
+        &-list {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 1em;
+            &-option  {
+                padding: .5em;
+                background: $black_t;
+                cursor: pointer;
+                transition: background .2s linear;
+                &:hover {
+                    background: $green;
+                    color: $black;
+                }
+            }
+        }
+        &-view {
+            height: max-content;
+            width: 90%;
+            margin: 0 auto;
+            & pdf-viewer {
+                height: 30em;
+                width: 800px;
+            }
+            & iframe {
+                border: none;
+                outline: none;
+                width: 100%;
+                height: 450px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .app-documents {
+        &__container {
+            width: 500px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<div class="app-home">
+    <div class="app-home__container" *ngIf="template">
+      <div class="app-home__container-lettering">
+        <app-lettering [lettering]="template.lettering"></app-lettering>
+        <p class="app-home__container-description ani-fade">
+          {{template.slogan}}
+        </p>
+        <h3 class="app-home__container-typewritter">{{template.typewriter.fixed}} &nbsp;<span>
+          <ngx-typed-js [strings]="template.typewriter.words" [typeSpeed]="40" [showCursor]="true" [backSpeed]="40" [loop]="true">
+            <span class="typing"></span>
+          </ngx-typed-js>
+
+        </span></h3>
+        <div class="app-home__container-button">
+          <button routerLink="links" >{{template.button}}</button>
+        </div>
+      </div>
+    </div>
+  </div>

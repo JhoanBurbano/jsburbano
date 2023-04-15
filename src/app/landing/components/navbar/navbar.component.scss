@@ -1,0 +1,41 @@
+@import '../../../../variables.scss';
+
+.app-navbar{
+    background: $gray_d;
+    height: $full-height;
+    max-width: $navbar-width;
+    box-shadow: 5px 0 30px $black_t;
+    position: sticky;
+    transition: transform .3s linear;
+    &__profile{
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        overflow: hidden;
+        &-img{
+            width: $navbar-width;
+            transition: transform .2s linear;
+            &:hover {
+                transform: scale(1.05)
+            }
+        }
+        &-name{
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+    &__menu{
+        &-option {
+            border-top: 1px solid $gray_l;
+            padding: 20px 0;
+            &-title{
+                text-align: center;
+                color: $gray_l;
+                z-index: 3;
+            }
+        }
+    }
+}
+

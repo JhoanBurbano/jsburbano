@@ -1,0 +1,9 @@
+<div class="app-links">
+    <div class="app-links__container">
+        <app-lettering [subtitle]="title" size="s" [white]="true"></app-lettering>
+        <div *ngFor="let link of links, let i = index;" [class]="'app-links__container-link ' + link.icon + ' animate__animated animate__backInUp delay-' + (i)">
+            <img class="app-links__container-link-icon" [src]="'assets/icons/'+link.icon+'.svg'" [alt]="link.icon">
+            <a class="app-links__container-link-title" [href]="link.url" target="_blank">{{link.title}}</a>
+        </div>
+    </div>
+</div>

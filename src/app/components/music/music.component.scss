@@ -1,0 +1,44 @@
+@import '../../../variables.scss';
+
+.app-music {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $black_o ;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: space-EVENLY;
+    align-items: center;
+    margin: 5px;
+    z-index: 100;
+    &__cloud {
+        width: 26px;
+        color: $red;
+    }
+    &__label {
+        color: $red;
+        cursor: pointer;
+    }
+    &__input {
+        display: none;
+        &:checked label{
+            color: $green;
+        }
+    }
+}
+
+.green {
+    color: $green;
+}
+
+@media screen and (max-width: 1200px) {
+    .app-music {
+        width: 100px;
+        height: 50px;
+        margin: 2px;
+        &__word {
+            display: none;
+        }
+    }
+}

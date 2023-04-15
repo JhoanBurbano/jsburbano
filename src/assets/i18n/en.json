@@ -1,0 +1,358 @@
+{
+  "LANDING_MODULE": {
+    "Profile": {
+      "name": "Jhoan Sebastian Burbano",
+      "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/assets/imgs/profile-white.jpg"
+    },
+    "NavBar": {
+      "title": "Go Home",
+      "links": [
+        {
+          "title": "About",
+          "action": "about-me"
+        },
+        {
+          "title": "Skills",
+          "action": "skills"
+        },
+        {
+          "title": "Projects",
+          "action": "projects"
+        },
+        {
+          "title": "Contact",
+          "action": "contact"
+        },
+        {
+          "title": "Documents",
+          "action": "documents"
+        },
+        {
+          "title": "Links",
+          "action": "links"
+        }
+      ]
+    },
+    "HomePage": {
+      "lettering": ["Hi,", "I'm Jhoan", "Burbano"],
+      "slogan": "Web Developer & Amateur Designer",
+      "typewriter": {
+        "fixed": "I am",
+        "words": ["Developer", "Designer", "Freelancer", "FullStack"]
+      },
+      "button": "Contact me"
+    },
+    "AboutPage": {
+      "title": "My, Myself & I",
+      "paragraphs": [
+        "I’m a FullStack Developer located in Colombia. I have a serious passion for optimization, animations and creating intuitive, dynamic user experiences.",
+        "Social person, problem solver, autodidact with high attention to detail. Fan of Comics, swimming, TV series and English songs. A family person and father of one hiperactive boy,",
+        "Interested in the entire frontend and backend spectrum and working on ambitious projects, startups, developers teams with positive people."
+      ],
+      "link": "Let's something special"
+    },
+    "SkillsPage": {
+      "title": "Skills & Experience",
+      "next": "next page",
+      "paragraphs": [
+        "Since beginning my journey as a freelance developer nearly 7 years ago, I’ve done remote work for local agencies, consulted for startups, and collaborated with talented people to create web products for both business and consumer use.",
+        "I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development with React, Angular, Next & Vue, building small and medium web apps, custom plugins and libraries, features, animations, and coding interactive layouts.",
+        "I also have full-stack developer experience with the most popular stacks like MEAN(MongoDB, Express, Angular, Node) & MERN (MongoDB, Express, React, Node).",
+        "Visit my LinkedIn profile for more details or just contact me."
+      ],
+      "skills": [
+        {
+          "tab": "Frontend",
+          "content": [
+            {
+              "name": "Javascript",
+              "status": "expert",
+              "level": 4,
+              "years": 7
+            },
+            {
+              "name": "Typescript",
+              "status": "expert",
+              "level": 4,
+              "years": 7
+            },
+            {
+              "name": "Redux, NgRx",
+              "status": "advance",
+              "level": 3,
+              "years": 5
+            },
+            {
+              "name": "AngularJS",
+              "status": "expert",
+              "level": 4,
+              "years": 5
+            },
+            {
+              "name": "ReactJS (Typescript)",
+              "status": "expert",
+              "level": 4,
+              "years": 5
+            },
+            {
+              "name": "NextJs",
+              "status": "expert",
+              "level": 4,
+              "years": 5
+            },
+            {
+              "name": "Django",
+              "status": "advance",
+              "level": 3,
+              "years": 2
+            }
+          ]
+        },
+        {
+          "tab": "Backend",
+          "content": [
+            {
+              "name": "NodeJS (ExpressJS)",
+              "status": "advance",
+              "level": 3,
+              "years": 5
+            },
+            {
+              "name": "NestJs",
+              "status": "expert",
+              "level": 4,
+              "years": 4
+            },
+            {
+              "name": "Python",
+              "status": "advance",
+              "level": 3,
+              "years": 3
+            },
+            {
+              "name": "ASP .Net Core (C#)",
+              "status": "technical",
+              "level": 2,
+              "years":2
+            }
+          ]
+        },
+        {
+            "tab": "Databases",
+            "content":[
+                {
+                    "name": "PostgreSQL, My SQL",
+                    "status": "advance",
+                    "level": 3,
+                    "years": 4
+                },
+                {
+                    "name": "MongoDB",
+                    "status": "advance",
+                    "level": 3,
+                    "years": 3
+                },
+                {
+                    "name": "Firebase",
+                    "status": "technical",
+                    "level": 2,
+                    "years": 2
+                }
+            ]
+        },
+        {
+            "tab": "Mobile",
+            "content": [
+                {
+                    "name": "Flutter (Dart)",
+                    "status": "technical",
+                    "level": 2,
+                    "years": 2
+                },
+                {
+                    "name": "Android Studio",
+                    "status": "technical",
+                    "level": 2,
+                    "years": 2
+                },
+                {
+                    "name": "React Native",
+                    "status": "technical",
+                    "level": 2,
+                    "years": 2
+                }
+            ]
+        }
+      ],
+      "experiences": [
+        {
+          "job": "Fullstack Developer",
+          "company": "Techtivo",
+          "years": "2016 - 2018",
+          "description": "I was the teamlead and I manage the credit team, we had an important participation in Virtual Card development"
+        },
+        {
+          "job": "Frontend engineer",
+          "company": "Appsus",
+          "years": "2018 - 2020",
+          "description": "I was working in the development of several software solutions, mostly, I was manage the front end component of each of them"
+        },
+        {
+          "job": "Full Stack Engineer",
+          "company": "Freelancer",
+          "years": "2020 - 2021",
+          "description": "I was developer and consultant, I managed clients and projects as a FrontEnd Developer most"
+        },
+        {
+          "job": "Fullstack Developer",
+          "company": "Iuvity",
+          "years": "2021 - 2022",
+          "description": "I was working in the flows redesign to users, these flows were mostly a credit applications and the others were marketing campaigns and advertising"
+        },
+        {
+          "job": "Software Developer",
+          "company": "MYC Solutions",
+          "years": "2021 - 2022",
+          "description": "I was working in the flows redesign to users, these flows were mostly a credit applications and the others were marketing campaigns and advertising"
+        },
+        {
+          "job": "Software Developer",
+          "company": "E-volution",
+          "years": "2021 - 2022",
+          "description": "I was working in the flows redesign to users, these flows were mostly a credit applications and the others were marketing campaigns and advertising"
+        },
+        {
+          "job": "Frontend Engineer",
+          "company": "Aplazo",
+          "years": "2021 - 2022",
+          "description": "I was in charge of Frontend implementation and the maintenance, I was in B2C Team"
+        }
+      ]
+    },
+    "ProjectsPage": {
+      "title": "My Portfolio",
+      "paragraphs": [
+        "A small gallery of recent projects chosen by me. I've done them all together with amazing people from companies around the globe. It's only the most recent projects"
+      ],
+      "button": "See more",
+      "projects": [
+        {
+          "name": "Rick & Morty",
+          "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/projects/rick-and-morty_screen.png",
+          "skills": ["Typescript", "Angular", "NgRx"],
+          "url": "https://rick-and-morty-aplazo.vercel.app/characters"
+        },
+        {
+          "name": "Qickly",
+          "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/projects/quickly-chat_screen.png",
+          "skills": [
+            "Vite",
+            "React",
+            "Redux",
+            "Web Socket",
+            "Socket.io",
+            "ExpressJS"
+          ],
+          "url": "https://rick-and-morty-aplazo.vercel.app/characters"
+        },
+        {
+          "name": "Architects",
+          "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/projects/social-network_screen.png",
+          "skills": ["AngularJS", "ExpressJs", "RxJS"],
+          "url": "https://rick-and-morty-aplazo.vercel.app/characters"
+        },
+        {
+          "name": "Rick & Morty",
+          "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/projects/rick-and-morty_screen.png",
+          "skills": ["Typescript", "Angular", "NgRx"],
+          "url": "https://rick-and-morty-aplazo.vercel.app/characters"
+        },
+        {
+          "name": "Qickly",
+          "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/projects/quickly-chat_screen.png",
+          "skills": [
+            "Vite",
+            "React",
+            "Redux",
+            "Web Socket",
+            "Socket.io",
+            "ExpressJS"
+          ],
+          "url": "https://rick-and-morty-aplazo.vercel.app/characters"
+        },
+        {
+          "name": "Architects",
+          "image": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/projects/social-network_screen.png",
+          "skills": ["AngularJS", "ExpressJs", "RxJS"],
+          "url": "https://rick-and-morty-aplazo.vercel.app/characters"
+        }
+      ]
+    },
+    "ContactPage":{
+      "title": "Contact me",
+      "paragraphs": ["I’m interested in freelance opportunities or job opportunities especially with ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form."],
+      "form":[{
+        "type": "text",
+        "name": "remitant"
+      },{
+        "type": "text",
+        "name": "email"
+      },{
+        "type": "text",
+        "name": "subject"
+      },{
+        "type": "textarea",
+        "name": "message"
+      }],
+      "button": "Send Message"
+    },
+    "DocumentsPage":{
+      "title": "Documents",
+      "paragraphs": ["It is the documents gallery that you could need"],
+      "list":[
+        {
+          "filename": "jhoan_burbano_curriculum_vitae.pdf",
+          "url": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/assets/jhoan_burbano_curriculum_vitae.pdf"
+        },{
+          "filename": "jhoan_burbano_english_certificate.pdf",
+          "url": "https://burbanostudio-assets.s3.us-east-2.amazonaws.com/assets/jhoan_burbano_english_certificate.pdf"
+        }
+      ]
+    },
+    "LinksPage": {
+      "title": "LINKS",
+      "links": [
+        {
+          "title": "@jhoanburbano",
+          "url": "https://github.com/JhoanBurbano",
+          "icon": "github"
+        },
+        {
+          "title": "@jsburbano07",
+          "url": "https://www.instagram.com/jsburbano07/",
+          "icon": "instagram"
+        },
+        {
+          "title": "@jsburbano",
+          "url": "https://www.linkedin.com/in/jsburbano/",
+          "icon": "linkedin"
+        },
+        {
+          "title": "@jsburbano",
+          "url": "https://www.linkedin.com/in/jsburbano/",
+          "icon": "tiktok"
+        },
+        {
+          "title": "@jsburbano",
+          "url": "https://onlyfans.com/jsburbano",
+          "icon": "onlyfans"
+        },
+        {
+          "title": "Buy me a coffee",
+          "url": "https://paypal.me/SebasBurbano",
+          "icon": "paypal"
+        }
+      ]
+    }
+  }
+}

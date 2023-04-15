@@ -1,0 +1,7 @@
+.app-viewport {
+    position: relative;
+    display: flex;
+    & .content {
+        width: 100vw;
+    }
+}

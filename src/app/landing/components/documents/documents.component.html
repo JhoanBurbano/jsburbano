@@ -1,0 +1,29 @@
+<div class="app-documents" *ngIf="template">
+  <div class="app-documents__container">
+    <app-lettering [subtitle]="template['title']"></app-lettering>
+    <p class="app-documents__container-paragraphs">
+      <span *ngFor="let text of template['paragraphs']">
+        {{ text }}
+      </span>
+    </p>
+    <div class="app-documents__container-list">
+      <div
+        class="app-documents__container-list-option"
+        *ngFor="let item of template['list']"
+        (click)="selectFile(item['url'])"
+      >
+        <!-- <a [href]="item['url']" target="_blank">{{ item["filename"] }}</a> -->
+        {{ item["filename"] }}
+      </div>
+    </div>
+    <div class="app-documents__container-view">
+      <!-- <pdf-viewer
+        [src]="urlDocument"
+        [render-text]="true"
+        [original-size]="true"
+        [zoom-scale]="page-width"
+      ></pdf-viewer> -->
+      <iframe [src]="urlDocument | safe: 'resourceUrl'" type="application/pdf"></iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="app-navbar">
+  <div
+    class="app-navbar__profile"
+    (click)="goHome()"
+    [title]="template.title"
+    *ngIf="template"
+  >
+    <img [src]="user.image | safe:'url'" alt="" class="app-navbar__profile-img" />
+    <p class="app-navbar__profile-name bg-opacity ani-fadein">
+      {{ user.name }}
+    </p>
+  </div>
+  <div class="app-navbar__menu">
+    <div
+      class="app-navbar__menu-option tra-barsin"
+      *ngFor="let item of links"
+      [routerLink]="item.action"
+      (click)="hideNavbar()"
+    >
+      <a class="app-navbar__menu-option-title">
+        {{ item.title }}
+      </a>
+    </div>
+  </div>
+</div>

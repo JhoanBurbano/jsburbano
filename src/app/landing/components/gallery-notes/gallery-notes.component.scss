@@ -1,0 +1,56 @@
+@import '../../../../styles.scss';
+
+
+.app-notes {
+    height: 300px;
+    overflow-y:hidden;
+    overflow-x: scroll;
+    padding-left: 25px;
+    font-size: 1.042em;
+scroll-behavior: smooth;
+    & app-lettering {
+        position: absolute;
+        width: 200px;
+        transform: translateX(-50%) translateY(8em) rotate(-90deg);
+        left: 0;
+        top: -1em;
+        background: $gray_d;
+        margin: 0 0 0 20px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    &__container {
+        width: max-content;
+        height: 270px;
+        display: flex;
+        align-items: center;
+        scroll-behavior: smooth;
+        &-note {
+            width: 250px;
+            height: 250px;
+            background: $black;
+            box-shadow: 0 0 20px $black_o;
+            margin: 0 10px;
+            border-radius: 4px;
+            padding: 10px;
+            z-index: 1;
+            cursor: pointer;
+            &:hover {
+                outline: 2px solid $green;
+            }
+            &-job {
+                color: $blue_d;
+                font-size: 1.5em;
+            }
+        &-company {
+            color: $blue;
+            &-years {
+                color: $gray_l;
+            }
+        }
+        &-description {
+            font-size: .8em;
+        }
+        }
+    }
+}

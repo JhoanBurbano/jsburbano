@@ -1,0 +1,27 @@
+<h1 class="app-lettering" *ngIf="letters.length">
+  <span class="app-lettering__row" *ngFor="let items of letters">
+    <ng-container *ngFor="let letter of items; let i = index">
+      <span
+        class="app-lettering__row-letter animate__animated animate__rubberBand"
+        *ngIf="letter !== 'J'"
+        >{{ letter }}</span
+      >
+      <span
+        class="app-lettering__row-mainletter animate__animated animate__zoomIn animate__faster"
+        *ngIf="letter === 'J'"
+        >&nbsp;{{ letter }}</span
+      >
+    </ng-container>
+    <br />
+  </span>
+</h1>
+
+
+<h1 class="app-title" *ngIf="title.length" [ngClass]="{'mb-none': size==='s'}">
+  <ng-container  *ngFor="let letter of title;let i = index">
+      <span [class]="'app-title__letter delay-'+i+' font-' + size" [ngClass]="{'color-white': white}">
+          {{letter}}
+      </span>
+      <span *ngIf="letter===' '">&nbsp;&nbsp;</span>
+  </ng-container>
+</h1>

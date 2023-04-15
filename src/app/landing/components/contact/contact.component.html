@@ -1,0 +1,34 @@
+<div class="app-contacts">
+  <div class="app-contacts__container" *ngIf="template">
+    <app-lettering [subtitle]="template['title']"></app-lettering>
+    <p class="app-contacts__container-paragraphs">
+      <span *ngFor="let text of template['paragraphs']">
+        {{ text }}
+      </span>
+    </p>
+    <form
+      [formGroup]="formControl"
+      (ngSubmit)="onSubmit()"
+      class="app-contacts__container-form"
+    >
+      <ng-container *ngFor="let item of template['form']">
+        <input
+          [formControlName]="item['name']"
+          [placeholder]="item['name']"
+          class="app-contacts__container-form-input"
+          *ngIf="item['type'] === 'text'"
+        />
+        <textarea
+          [formControlName]="item['name']"
+          [placeholder]="item['name']"
+          class="app-contacts__container-form-input"
+          *ngIf="item['type'] === 'textarea'"
+          (input)="setUpperCase($event.target.value, item['name'])"
+        ></textarea>
+      </ng-container>
+      <div class="app-contacts__container-form-button">
+        <button type="submit">{{ template["button"] }}</button>
+      </div>
+    </form>
+  </div>
+</div>

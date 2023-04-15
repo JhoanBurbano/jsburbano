@@ -1,0 +1,18 @@
+<div class="app-landing">
+   <div class="app-landing__app-navbar" [ngClass]="{'active': isActive}">
+    <app-navbar></app-navbar>
+   </div>
+   <div class="app-landing__outlet">
+    <router-outlet></router-outlet>
+   </div>
+   <div class="app-landing__button">
+    <div class="app-landing__button-wrap" (click)="setMenu()">
+        <!-- <i></i>
+        <i></i>
+        <i></i> -->
+        <mat-icon *ngIf="isActive">close</mat-icon>
+        <mat-icon *ngIf="!isActive">menu</mat-icon>
+      </div>
+    </div>
+  </div>
+  

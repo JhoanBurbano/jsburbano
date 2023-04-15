@@ -1,0 +1,66 @@
+@import '../../../../variables.scss';
+
+.app-home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        &-lettering {
+            & > * {
+                margin-bottom: 1em;
+                display: block;
+            }
+        }
+        &-description {
+            color: $gray_l;
+            letter-spacing: 1ch;
+        }
+        &-typewritter{
+            letter-spacing: .8ch;
+            font-size: 1.3em;
+            display: flex!important;
+            & span {
+                color: $green
+            }
+        }
+        &-button{
+            display: flex;
+            width: 200px;
+            position: relative;
+            overflow: hidden;
+            &:hover:after {
+                transform: translateX(0);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 60px;
+                background: $green;
+                top: 0;
+                left: 0;
+                transform: translateX(-200px);
+                z-index: -1;
+                transition: transform .15s linear 0s;
+            }
+            & button {
+                border: none;
+                outline: none;
+                width: 200px;
+                line-height: 2ch;
+                font-size: 1em;
+                padding: 20px 0;
+                background: transparent;
+                cursor: pointer;
+                color: $green;
+                border: 1px solid $green;
+                z-index: 1;
+                &:hover{
+                    color: $black;
+                }
+            }
+
+        }
+    }
+}

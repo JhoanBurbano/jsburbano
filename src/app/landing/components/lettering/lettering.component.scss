@@ -1,0 +1,39 @@
+@import '../../../../variables.scss';
+@import '../../../../animations.scss';
+
+.app-lettering {
+    font-size: 6em;
+    line-height: .9em;
+    &__row{
+        &>*{
+            display: inline-block;
+        }
+        &-letter{
+            &:hover{
+                color: $green;
+                animation: rubberBand 1s linear;
+                cursor: pointer;
+            }
+        }
+        &-mainletter {
+            color: $red;
+            text-shadow: -5px 0 0 $green;
+            animation: rotate .3s linear;
+        }
+    }
+}
+
+.app-title {
+    color: $green;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+    &__letter {
+        font-size: 2.5em;
+        animation-name: rubberBand;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        display: inline-block;
+    }
+}

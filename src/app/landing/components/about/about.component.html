@@ -1,0 +1,17 @@
+<div class="app-about">
+    <div class="app-about__container">
+        <article class="app-about__container-text">
+            <app-lettering [subtitle]="template['title']"></app-lettering>
+            <br>
+            <p href="" class="app-about__container-text-paragraph">
+                <span [class]="'app-about__container-text-paragraph-each animate__animated animate__backInUp delay-'+i" *ngFor="let item of paragraphs; let i = index">
+                    {{item}}
+                    <br>
+                    <br>
+                </span>
+            </p>
+
+            <a href="" class="app-about__container-text-link animate__animated animate__backInUp">{{template['link']}}</a>
+        </article>
+    </div>
+</div>

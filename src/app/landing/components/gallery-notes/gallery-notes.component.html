@@ -1,0 +1,24 @@
+<div class="app-notes" #notes>
+    <app-lettering [subtitle]="'experiences'" size="s"></app-lettering>
+    <button (click)="nextControl()">{{'>'}}</button>
+    <div class="app-notes__container">
+        <div
+          class="app-notes__container-note"
+          *ngFor="let note of experiences"
+        >
+          <h3 class="app-notes__container-note-job">{{ note.job }}</h3>
+          <br>
+          <p class="app-notes__container-note-company">
+            <span>
+              {{ note.company }}
+            </span>
+            <br />
+            <i class="app-notes__container-note-company-years">{{ note.years }}</i>
+          </p>
+          <br>
+          <p class="app-notes__container-note-description">
+            {{ note.description }}
+          </p>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,76 @@
+@import '../../../../variables.scss';
+@import '../../../../animations.scss';
+
+.app-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__container {
+        height: 600px;
+        width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px $black_o;
+        background-color: $gray_d;
+        padding: 20px;
+        overflow: hidden;
+        & app-lettering {
+            margin-bottom: 10px;
+        }
+        &-link{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $gray;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px $black_o;
+            cursor: pointer;
+            padding: 10px;
+            position: relative;
+            &.instagram{
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            }
+            &.linkedin{
+                background: $blue_d;
+            }
+            &.onlyfans{
+                background: $blue;
+            }
+            &.github{
+                background: $gray;
+            }
+            &.tiktok{
+                background: $black;
+                & img{
+                    filter: invert(1) sepia(1) hue-rotate(90deg) saturate(100%) drop-shadow(3px 0 0px $red);
+                }
+            }
+            &.paypal{
+                background: $white;
+                & img{
+                    filter: none;
+                }
+                & a {
+                    color: $gray_d;
+                }
+            }
+            &-icon{
+                position: absolute;
+                left: 10px;
+                width: 1.5em;
+                justify-self: start;
+                margin-right: 10px;
+                filter: invert(1) sepia(1) hue-rotate(90deg) saturate(100%);
+            }
+            &-title{
+                flex:1;
+                text-align: center;
+                font-weight: bold;
+                text-shadow: 0 0 5px $black_o;
+            }
+        }
+    }
+}

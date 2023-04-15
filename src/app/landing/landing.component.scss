@@ -1,0 +1,65 @@
+@import '../../styles.scss';
+
+.app-landing {
+    display: flex;
+    &__app-navbar{
+        width: max-content;
+        display: flex;
+        justify-content: center;
+    }
+    &__outlet{
+        flex: 1;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .app-landing{
+        position: relative;
+        &__app-navbar{
+            position: absolute;
+            transform: translateY(-100vh);
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            backdrop-filter: blur(1em) contrast(0.4) saturate(0);
+            transition: transform .3s linear;
+            &.active{
+                transform: translateY(0);
+            }
+        }
+        &__button{
+            background-color: $green;
+            border-radius: 50%;
+            width: 4em;
+            height: 4em;
+            position: fixed;
+            bottom: 2em;
+            right: 2em;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+            box-shadow: 0 0 20px $black_o;
+            &-wrap {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & * {
+                    font-size: 2em;
+                    color: $black;
+                }
+                // & i {
+                //     background: $black;
+                //     display: block;
+                //     width: 2.5em;
+                //     height: 2px;
+                //     margin: .9em auto;
+                // }
+            }
+            
+        }
+    }
+}
