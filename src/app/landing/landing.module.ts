@@ -16,7 +16,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DocumentsComponent } from './components/documents/documents.component';
 import { GalleryNotesComponent } from './components/gallery-notes/gallery-notes.component';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { SafePipe } from '../pipes/safe.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { UiService } from './services/ui.service';
@@ -43,7 +42,6 @@ import { UiService } from './services/ui.service';
     NgxTypedJsModule,
     TranslocoModule,
     ReactiveFormsModule,
-    PdfViewerModule,
     MatIconModule
   ],
   exports: [
