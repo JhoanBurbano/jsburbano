@@ -48,6 +48,9 @@
                     grid-column: 1 / span 2;
                     padding: .5em;
                 }
+                &.error {
+                    border-color: $red;
+                }
             }
             &-button{
                 grid-column: 1/ span 2;
@@ -87,6 +90,20 @@
                     z-index: 1;
                     &:hover{
                         color: $black;
+                    }
+                }
+                &.disabled {
+                    &::after {
+                        background: $gray_l;
+                    }
+                    & button {
+                        border-color: $gray_l;
+                        color: $gray_l;
+                        cursor: not-allowed;
+                        &:hover{
+                            border-color: $black;
+                            color: $black;
+                        }
                     }
                 }
     

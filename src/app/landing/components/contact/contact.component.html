@@ -16,18 +16,24 @@
           [formControlName]="item['name']"
           [placeholder]="item['name']"
           class="app-contacts__container-form-input"
+          [ngClass]="{'error': formControl.get(item['name']).invalid && formControl.get(item['name']).touched}"
           *ngIf="item['type'] === 'text'"
+          (input)="setUpperCase($event.target.value, item['name'])"
         />
         <textarea
           [formControlName]="item['name']"
           [placeholder]="item['name']"
           class="app-contacts__container-form-input"
+          [ngClass]="{'error': formControl.get(item['name']).invalid && formControl.get(item['name']).touched}"
           *ngIf="item['type'] === 'textarea'"
           (input)="setUpperCase($event.target.value, item['name'])"
         ></textarea>
       </ng-container>
-      <div class="app-contacts__container-form-button">
-        <button type="submit">{{ template["button"] }}</button>
+      <div class="app-contacts__container-form-errors" *ngIf="!formControl.valid">
+        <span></span>
+      </div>
+      <div class="app-contacts__container-form-button" [ngClass]="{'disabled': !formControl.valid}">
+        <button type="submit" [disabled]="!formControl.valid">{{ template["button"] }}</button>
       </div>
     </form>
   </div>

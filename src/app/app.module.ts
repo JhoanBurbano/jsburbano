@@ -25,8 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     TranslocoRootModule,
     BrowserAnimationsModule,
-    MatIconModule
-  ],
+    MatIconModule  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -19,6 +19,10 @@ import { GalleryNotesComponent } from './components/gallery-notes/gallery-notes.
 import { SafePipe } from '../pipes/safe.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { UiService } from './services/ui.service';
+import { LandingService } from './services/landing.service';
+import { HttpClientModule } from '@angular/common/http';
+import { NotificationService } from './services/notification.service';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -41,12 +45,14 @@ import { UiService } from './services/ui.service';
     LandingRoutingModule,
     NgxTypedJsModule,
     TranslocoModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    ToastrModule.forRoot(),
   ],
   exports: [
     NavbarComponent
   ],
-  providers: [UiService]
+  providers: [UiService, LandingService, NotificationService]
 })
 export class LandingModule { }

@@ -11,6 +11,9 @@
         flex: 1;
         overflow: hidden;
     }
+    &__button {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -30,6 +33,7 @@
             }
         }
         &__button{
+            display: block;
             background-color: $green;
             border-radius: 50%;
             width: 4em;
@@ -51,13 +55,6 @@
                     font-size: 2em;
                     color: $black;
                 }
-                // & i {
-                //     background: $black;
-                //     display: block;
-                //     width: 2.5em;
-                //     height: 2px;
-                //     margin: .9em auto;
-                // }
             }
             
         }

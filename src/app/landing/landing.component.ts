@@ -14,7 +14,6 @@ export class LandingComponent implements OnInit {
 
   ngOnInit(): void {
     this.isActive$.subscribe((value) => {
-      console.log('value', value, this.isActive)
       this.isActive = value
     });
   }

@@ -6,8 +6,5 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
-  constructor(){
-    console.log(environment.API_URL)
-  }
+  
 }
