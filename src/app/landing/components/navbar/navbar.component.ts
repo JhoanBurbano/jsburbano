@@ -34,12 +34,16 @@ export class NavbarComponent implements OnInit {
   }
 
   hideNavbar(){
-    this.ui$.setNavBar()
+    if(window.innerWidth <= 850){
+      this.ui$.setNavBar()
+    }
   }
 
   goHome() {
     this.location.navigate([''])
-    this.ui$.setNavBar()
+    if(window.innerWidth <= 850){
+      this.ui$.setNavBar()
+    }
   }
 
 }
