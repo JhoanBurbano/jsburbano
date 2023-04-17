@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, RequiredValidator, Validators } from '@angular/forms';
 import { TranslocoService } from '@ngneat/transloco';
-import { switchMap } from 'rxjs';
+import { switchMap, take, tap } from 'rxjs';
 import { LandingService } from '../../services/landing.service';
 import { NotificationService } from '../../services/notification.service';
 
@@ -28,6 +28,8 @@ export class ContactComponent implements OnInit {
   };
 
   public template: Record<string, any>;
+
+  public isDisabled: boolean = false
 
   constructor(
     private readonly formBuilder: FormBuilder,
@@ -66,11 +68,14 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     // let values;
+    this.isDisabled = true
     this.formData = this.formControl.value;
     console.log('first', 'first');
-    this.landing$.sendEmail(this.formData).subscribe((response: {message: string}) => {
+    this.landing$.sendEmail(this.formData)
+    .subscribe((response: {message: string}) => {
       this.formControl.reset();
-      this.notification.showNotification(response.message)
+      this.notification.showNotification(response.message),
+      this.isDisabled = false
     });
   }
 }

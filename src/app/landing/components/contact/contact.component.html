@@ -32,8 +32,8 @@
       <div class="app-contacts__container-form-errors" *ngIf="!formControl.valid">
         <span></span>
       </div>
-      <div class="app-contacts__container-form-button" [ngClass]="{'disabled': !formControl.valid}">
-        <button type="submit" [disabled]="!formControl.valid">{{ template["button"] }}</button>
+      <div class="app-contacts__container-form-button" [ngClass]="{'disabled': !formControl.valid || isDisabled}">
+        <button type="submit" [disabled]="!formControl.valid || isDisabled">{{ template["button"] }}</button>
       </div>
     </form>
   </div>
