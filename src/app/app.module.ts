@@ -8,9 +8,10 @@ import { NgParticlesModule } from 'ng-particles';
 import { ParticlesComponent } from './components/particles/particles.component';
 import { MusicComponent } from './components/music/music.component';
 import { LandingModule } from './landing/landing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NocacheInterceptor } from './nocache.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TranslocoRootModule,
     BrowserAnimationsModule,
     MatIconModule  ],
-  providers: [],
+  providers: [    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: NocacheInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
