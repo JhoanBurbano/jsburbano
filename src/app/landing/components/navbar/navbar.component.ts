@@ -24,7 +24,6 @@ export class NavbarComponent implements OnInit {
       switchMap( template => {
         this.links = template.links
         this.template = template
-        console.log('template', template)
         return this.transloco$.selectTranslateObject("LANDING_MODULE.Profile")
       } )
       )

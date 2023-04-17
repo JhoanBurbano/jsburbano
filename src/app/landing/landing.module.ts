@@ -23,6 +23,7 @@ import { LandingService } from './services/landing.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NotificationService } from './services/notification.service';
 import { ToastrModule } from 'ngx-toastr';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ToastrModule } from 'ngx-toastr';
     ContactComponent,
     DocumentsComponent,
     GalleryNotesComponent,
+    LoaderComponent,
     SafePipe,
   ],
   imports: [

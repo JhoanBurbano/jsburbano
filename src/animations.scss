@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 @keyframes rubberBand {
   0% {
     transform: scale3d(1, 1, 1);
@@ -65,6 +67,24 @@
   }
 }
 
+@keyframes leftIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes leftOut {
+  0% {
+    transform: translateX(-0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -126,3 +146,40 @@
   }
 }
 
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+@keyframes colorize {
+  0% {
+    background-color: $red;
+  }
+  50% {
+    background-color: $blue;
+  }
+  100% {
+    background-color: $red;
+  }
+}
+
+@keyframes rotateStatic {
+  0% {
+    transform: rotate(0deg);
+    color: $white;
+    text-shadow: -5px 0 0 $black;
+  }
+  100% {
+    color: $red;
+    transform: rotate(360deg);
+    text-shadow: -5px 0 0 $green;
+  }
+}

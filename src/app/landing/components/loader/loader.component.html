@@ -1,0 +1,4 @@
+<div *ngIf="isLoading$ | async" class="app-loader" [ngClass]="{'hide': (progress$ | async) >= (timer - 4)}">
+    <h3 class="app-loader__letter">J</h3>
+    <div class="app-loader__bar" [ngClass]="{'start': (progress$ | async)}"></div>
+  </div>

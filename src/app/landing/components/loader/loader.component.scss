@@ -1,0 +1,63 @@
+@import '../../../../styles.scss';
+
+.app-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gray_d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000000;
+    animation: leftIn .3s ease-in;
+    &.hide {
+    animation: leftOut .3s ease-in;
+    }
+    &__letter {
+        font-size: 150px;
+        color: $red;
+        text-shadow: -5px 0 0 $green;
+        animation: rotateStatic .8s infinite;
+    }
+    &__bar{
+        width: 500px;
+        height: 5px;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            transition: all 2.1s ease-in;
+            display: block;
+            content: '';
+            text-align: center;
+            font-weight: bold;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $blue;
+            top: 0;
+            left: 0%;
+            overflow: hidden;
+            transform: translateX(-100%);
+            background: $red;
+        }
+        &.start::after{
+            transform: translateX(0);
+            background: $green;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .app-loader {
+        &__bar {
+            width: 200px;
+        }
+        &__letter {
+            font-size: 80px;
+        }
+    }
+}
