@@ -12,7 +12,7 @@
         <div class="app-projects__container-projects">
             <div class="app-projects__container-projects-container">
                 <div class="app-projects__container-projects-container-project" *ngFor="let project of projects; let i = index">
-                        <div class="app-projects__container-projects-container-project-info">
+                        <div class="app-projects__container-projects-container-project-info" [style]="'background-image: url(' + project.back + ')'">
                             <a [href]="project.url" target="_blank">
                                 <app-lettering [subtitle]="project.name" size="s"></app-lettering>
                             </a>

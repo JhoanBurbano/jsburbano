@@ -36,6 +36,10 @@ const routes: Routes = [
         path: 'documents',
         component: DocumentsComponent
       },{
+        path: 'x',
+        loadChildren: () =>
+        import('../modules/edit-profile/edit-profile.module').then((m) => m.EditProfileModule)
+      },{
         path: '**',
         redirectTo: '',
         pathMatch: 'full'

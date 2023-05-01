@@ -19,35 +19,8 @@
     &__letter {
         font-size: 150px;
         color: $red;
-        text-shadow: -5px 0 0 $green;
+        text-shadow: -10px 2PX 0 $green;
         animation: rotateStatic .8s infinite;
-    }
-    &__bar{
-        width: 500px;
-        height: 5px;
-        background-color: white;
-        position: relative;
-        overflow: hidden;
-        &::after {
-            transition: all 2.1s ease-in;
-            display: block;
-            content: '';
-            text-align: center;
-            font-weight: bold;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: $blue;
-            top: 0;
-            left: 0%;
-            overflow: hidden;
-            transform: translateX(-100%);
-            background: $red;
-        }
-        &.start::after{
-            transform: translateX(0);
-            background: $green;
-        }
     }
 }
 

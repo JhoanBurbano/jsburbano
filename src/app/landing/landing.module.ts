@@ -6,7 +6,6 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { LandingComponent } from './landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { LetteringComponent } from './components/lettering/lettering.component';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { LinksComponent } from './components/links/links.component';
 import { TranslocoModule } from '@ngneat/transloco';
@@ -24,13 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotificationService } from './services/notification.service';
 import { ToastrModule } from 'ngx-toastr';
 import { LoaderComponent } from './components/loader/loader.component';
+import { SharedModule } from '../shared/shared.module';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 
 @NgModule({
   declarations: [
     LandingComponent,
     HomeComponent,
-    LetteringComponent,
     NavbarComponent,
     LinksComponent,
     AboutComponent,
@@ -51,6 +51,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     ReactiveFormsModule,
     MatIconModule,
     ToastrModule.forRoot(),
+    SharedModule,
+    NgxExtendedPdfViewerModule,
   ],
   exports: [
     NavbarComponent

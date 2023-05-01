@@ -9,15 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class LoaderComponent {
   isLoading$: Observable<boolean>;
-  progress$: Observable<number>;
-  timer: number = 50
 
   constructor(private loadingService: UiService) {}
 
   ngOnInit() {
-    this.loadingService.startLoading(this.timer);
+    this.loadingService.startLoading();
     this.isLoading$ = this.loadingService.getIsLoading();
-    this.progress$ = this.loadingService.getProgress();
   }
 
   ngOnDestroy() {

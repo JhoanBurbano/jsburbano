@@ -1,0 +1,70 @@
+<div class="app-curriculum" *ngIf="data && template">
+    <div class="top" [style]="'background-image: url('+ data['banner'] +');'">
+        <figure class="img-profile">
+          <img [src]="data['profile']" alt="JSB" />
+        </figure>
+        <h3>{{data['name']}}</h3>
+        <p>{{data['career']}}</p>
+        <a [href]="data['links']['email']" class="email">
+          {{data['email']}}
+        </a>
+      </div>
+      <div class="body">
+        <div class="left">
+          <div class="info">
+            <h3>{{template['subtitle']}}</h3>
+            <ng-container *ngFor="let item of data['info']">
+                <a class="app-item" *ngIf="item[0]!== '+' "> {{item}} </a>
+                <a class="app-item" [href]="data['links']['whatsapp']" target='_blank' *ngIf="item[0] === '+' "> {{item}} </a>
+            </ng-container>
+            
+                  <div class="social">
+                    <a target='_blank' rel='noreferrer' [href]="data['links']['linkedin']"><app-icon [icon]="'linkedin'"></app-icon></a>
+                    <a target='_blank' rel='noreferrer' [href]="data['links']['github']"><app-icon [icon]="'github'"></app-icon></a>
+                    <a target='_blank' rel='noreferrer' [href]="data['links']['instagram']"><app-icon [icon]="'instagram'"></app-icon></a>
+                </div>
+          </div>
+          <div class="skills">
+            <h3>Skills</h3>
+            <a class="app-item" *ngFor="let item of data['skills']">{{item}}</a>
+          </div>
+          <div class="langs">
+            <h3>Langs</h3>
+            <a class="app-item" *ngFor="let item of data['langs']">{{item}}</a>
+          </div>
+          <div class="hobbies">
+            <h3>Hobbies & Preferences</h3>
+            <a class="app-item" *ngFor="let item of data['hobbies']">{{item}}</a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="intro">
+            <h3>About Me</h3>
+            <section
+              class="about"
+              [innerHTML]="data.about"
+            ></section>
+          </div>
+          <div class="experience">
+            <h3>Work Experience</h3>
+            <div class="app-card" *ngFor="let item of data['experience']">
+                <h4>{{item.title}}</h4>
+                <p>{{item.enterprise + ' | ' +item.year}}</p>
+                <b
+                [innerHTML]="item.description"
+                ></b>
+            </div>
+          </div>
+          <div class="academic">
+            <h3>Academic Formation</h3>
+            <div class="app-card" *ngFor="let item of data['academic']">
+                <h4>{{item.title}}</h4>
+                <p>{{item.school + ' | ' +item.year}}</p>
+                <b
+                [innerHTML]="item.description"
+                ></b>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

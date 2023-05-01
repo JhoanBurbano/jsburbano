@@ -6,6 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-skills',
@@ -32,7 +33,7 @@ export class SkillsComponent implements OnInit {
   public tabActive: string;
   @ViewChild('notes') notes: ElementRef;
 
-  constructor(private readonly transloco$: TranslocoService) {}
+  constructor(private readonly transloco$: TranslocoService, private readonly ui$: UiService) {}
 
   ngOnInit(): void {
     this.transloco$
@@ -47,6 +48,7 @@ export class SkillsComponent implements OnInit {
         if(window.innerWidth <= 1200){
           this.pageActive = 'notes'
         }
+        this.ui$.stopLoading()
       });
   }
 

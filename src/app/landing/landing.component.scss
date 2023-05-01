@@ -26,7 +26,8 @@
             top: 0;
             left: 0;
             width: 100vw;
-            backdrop-filter: blur(1em) contrast(0.4) saturate(0);
+            backdrop-filter: blur(1em);
+            background-color: $gray_t;
             transition: transform .3s linear;
             &.active{
                 transform: translateY(0);

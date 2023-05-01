@@ -17,13 +17,13 @@
       </div>
     </div>
     <div class="app-documents__container-view">
-      <!-- <pdf-viewer
-        [src]="urlDocument"
-        [render-text]="true"
-        [original-size]="true"
-        [zoom-scale]="page-width"
-      ></pdf-viewer> -->
-      <iframe [src]="urlDocument | safe: 'resourceUrl'" type="application/pdf"></iframe>
+      <!-- <ngx-extended-pdf-viewer
+        [src]="urlDocument | safe: 'resourceUrl'"
+        [useBrowserLocale]="true"
+        [textLayer]="true"
+        [showHandToolButton]="true"> 
+      ></ngx-extended-pdf-viewer> -->
+      <iframe [src]="urlDocument | safe: 'resourceUrl'" type="application/pdf" controls="0"></iframe>
     </div>
   </div>
 </div>

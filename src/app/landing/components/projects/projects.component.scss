@@ -95,8 +95,9 @@
                         }
                     }
                     &-info{
+                        background-size: cover;
+                        background-position: center;
                         position: absolute;
-                        background-color: $black_t;
                         transition: opacity .3s linear;
                         width: 300px;
                         height: 200px;
@@ -104,7 +105,12 @@
                         top: 0;
                         left: 0;
                         text-align: center;
-                    }
+                        color: $red;
+                        text-shadow: -3px 0 0 blue;
+                    & > * {
+                        font-weight: 900;
+
+                    }                    }
                     & img {
                         width: 300px;
                         height: 200px;

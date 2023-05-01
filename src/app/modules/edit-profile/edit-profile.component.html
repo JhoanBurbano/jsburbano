@@ -1,0 +1,17 @@
+<div class="app-edit" *ngIf="template">
+  <div class="app-edit__container">
+    <app-lettering [subtitle]="template['title']"></app-lettering>
+    <button
+    class="app-edit__container-button"
+      printSectionId="cv"
+      [useExistingCss]="true"
+      [printTitle]="template['name-files']['cv']"
+      ngxPrint
+    >
+      <mat-icon>download</mat-icon>
+    </button>
+    <div class="app-edit__container-viewer">
+      <app-curriculum id="cv"></app-curriculum>
+    </div>
+  </div>
+</div>

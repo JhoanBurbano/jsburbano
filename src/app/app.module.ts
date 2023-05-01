@@ -26,7 +26,8 @@ import { NocacheInterceptor } from './nocache.interceptor';
     HttpClientModule,
     TranslocoRootModule,
     BrowserAnimationsModule,
-    MatIconModule  ],
+    MatIconModule,
+    ],
   providers: [    {
     provide: HTTP_INTERCEPTORS,
     useClass: NocacheInterceptor,

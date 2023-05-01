@@ -4,6 +4,7 @@ import { TranslocoService } from '@ngneat/transloco';
 import { switchMap, take, tap } from 'rxjs';
 import { LandingService } from '../../services/landing.service';
 import { NotificationService } from '../../services/notification.service';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-contact',
@@ -35,7 +36,8 @@ export class ContactComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly transloco$: TranslocoService,
     private readonly landing$: LandingService,
-    private readonly notification: NotificationService
+    private readonly notification: NotificationService,
+    private readonly ui$: UiService
   ) {}
 
   ngOnInit(): void {
@@ -44,6 +46,7 @@ export class ContactComponent implements OnInit {
       .pipe(
         switchMap((template) => {
           this.template = template;
+          this.ui$.stopLoading()
           return this.formControl.valueChanges;
         })
       )

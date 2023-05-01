@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,7 +12,7 @@ export class ProjectsComponent implements OnInit{
   public projects: Array<{name: string, image: string, url: string, skills: Array<string>}> 
   public template: Record<string, any>;
 
-  constructor(private readonly transloco$: TranslocoService){ 
+  constructor(private readonly transloco$: TranslocoService, private readonly ui$: UiService){ 
   }
 
   ngOnInit(): void {
@@ -19,6 +20,7 @@ export class ProjectsComponent implements OnInit{
     .subscribe(template => {
       this.template = template;
       this.projects = template.projects;
+      this.ui$.stopLoading()
     })
   }
 }

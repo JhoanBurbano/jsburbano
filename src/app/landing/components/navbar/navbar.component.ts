@@ -29,6 +29,7 @@ export class NavbarComponent implements OnInit {
       )
     .subscribe(user => {
       this.user = user
+      this.ui$.stopLoading()
     })
   }
 
@@ -38,11 +39,17 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  onClickOption() {
+    this.hideNavbar()
+    this.ui$.startLoading()
+  }
+
   goHome() {
     this.location.navigate([''])
     if(window.innerWidth <= 850){
       this.ui$.setNavBar()
     }
+    this.ui$.startLoading()
   }
 
 }
