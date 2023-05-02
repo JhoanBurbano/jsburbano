@@ -1,0 +1,15 @@
+<div class="app-cover-letter">
+    <h2 class="app-cover-letter__title">{{template['title']}}</h2>
+    <p class="app-cover-letter__content">
+        <span *ngFor="let paragraph of template['paragraphs']">
+            {{paragraph}}
+            <br/> <br/>
+        </span>
+    </p>
+    <span class="app-cover-letter__sign">
+        <p class="app-cover-letter__sign-text">{{template['thanks']}}</p>
+        <br/>
+        <img [src]="template['sign']" alt="sign" class="app-cover-letter__sign-author">
+        <p>{{template['name']}}</p>
+    </span>
+</div>

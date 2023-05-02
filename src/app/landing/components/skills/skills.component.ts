@@ -54,7 +54,6 @@ export class SkillsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    console.log('Viewport width: ', event.target.innerWidth);
     if(event.target.innerWidth <= 1200 ){
       this.pageActive = 'notes'
     }

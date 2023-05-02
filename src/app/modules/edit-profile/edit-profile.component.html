@@ -3,15 +3,19 @@
     <app-lettering [subtitle]="template['title']"></app-lettering>
     <button
     class="app-edit__container-button"
-      printSectionId="cv"
+      [printSectionId]="file"
       [useExistingCss]="true"
       [printTitle]="template['name-files']['cv']"
       ngxPrint
     >
       <mat-icon>download</mat-icon>
     </button>
-    <div class="app-edit__container-viewer">
-      <app-curriculum id="cv"></app-curriculum>
+    <button (click)="changeFile('cover')">cover</button>
+    <button (click)="changeFile('cv')">cv</button>
+    <div class="app-edit__container-viewer" [ngSwitch]="file">
+        <app-curriculum *ngSwitchCase="'cv'" id="cv"></app-curriculum>
+        <app-cover-letter *ngSwitchCase="'cover'" id="cover"></app-cover-letter>
+      
     </div>
   </div>
 </div>

@@ -12,10 +12,6 @@
     align-items: center;
     flex-direction: column;
     z-index: 1000000;
-    animation: leftIn .3s ease-in;
-    &.hide {
-    animation: leftOut .3s ease-in;
-    }
     &__letter {
         font-size: 150px;
         color: $red;

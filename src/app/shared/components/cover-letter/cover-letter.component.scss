@@ -1,0 +1,23 @@
+@import 'src/variables.scss';
+.app-cover-letter {
+    background-color: $white;
+    max-width: 827px;
+    color: $black;
+    padding: 4em 6em;
+    min-height: 100%;
+    font-size: 16px;
+    &__title {
+        text-align: center;
+    }
+    &__content {
+
+    }
+    &__sign{
+        &-text {
+
+        }
+        &-author {
+            width: 200px;
+        }
+    }
+}

@@ -31,7 +31,7 @@ export class UiService {
   stopLoading() {
     setTimeout(()=>{
     this.isLoading$.next(false);
-    }, 1000)
+    }, 250)
   }
 
   getIsLoading() {

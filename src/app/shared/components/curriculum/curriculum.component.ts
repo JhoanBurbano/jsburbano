@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
@@ -6,7 +6,7 @@ import { TranslocoService } from '@ngneat/transloco';
   templateUrl: './curriculum.component.html',
   styleUrls: ['./curriculum.component.scss']
 })
-export class CurriculumComponent {
+export class CurriculumComponent implements OnInit{
   public data: Record<string, any>
   public template: Record<string, any>
   constructor(private readonly transloco$: TranslocoService) { }

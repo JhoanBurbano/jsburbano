@@ -39,9 +39,10 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  onClickOption() {
+  onClickOption(action: string) {
     this.hideNavbar()
-    this.ui$.startLoading()
+    let currentPath = this.location.url
+    if(!currentPath.includes(action)) return this.ui$.startLoading();
   }
 
   goHome() {
@@ -49,7 +50,6 @@ export class NavbarComponent implements OnInit {
     if(window.innerWidth <= 850){
       this.ui$.setNavBar()
     }
-    this.ui$.startLoading()
   }
 
 }

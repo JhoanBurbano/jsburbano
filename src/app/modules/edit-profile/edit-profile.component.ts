@@ -10,6 +10,7 @@ import { UiService } from 'src/app/landing/services/ui.service';
 export class EditProfileComponent implements OnInit{
 
   public template: Record<string, any>
+  public file: "cover" | "cv"  = "cover"
 
   constructor(private readonly transloco$: TranslocoService, private readonly ui$: UiService){ }
 
@@ -19,6 +20,10 @@ export class EditProfileComponent implements OnInit{
       this.template = template
       this.ui$.stopLoading()
     })
+  }
+
+  changeFile(file: "cover" | "cv"){
+    this.file = file;
   }
 
 }
