@@ -36,7 +36,7 @@ const routes: Routes = [
         path: 'documents',
         component: DocumentsComponent
       },{
-        path: 'x',
+        path: '*/edit',
         loadChildren: () =>
         import('../modules/edit-profile/edit-profile.module').then((m) => m.EditProfileModule)
       },{
