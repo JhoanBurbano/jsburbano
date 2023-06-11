@@ -34,11 +34,16 @@
     }
     &__link {
         color: $blue;
-        & mat-icon {
-            transform: scale(.8);
-            position: relative;
-            bottom: -5px;
-            color: white;
+        background: black;
+        display: block;
+        margin: 0 auto;
+        max-width: 250px;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 5px;
+        &:hover {
+            background: $blue;
+            color: $black;
         }
     }
 }

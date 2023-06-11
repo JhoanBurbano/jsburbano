@@ -19,6 +19,7 @@
             {{skill}}
         </p>
     </main>
-    <a [href]="data.url" target="_blank" class="architects-projects-modal__link"><app-icon icon="github"></app-icon>{{data.name}} - repository</a>
-    <a [href]="data.repository" target="_blank" class="architects-projects-modal__link"><mat-icon>public</mat-icon>{{data.name}} - website</a>
+    <a [href]="data.repository" target="_blank" class="architects-projects-modal__link">Forntend - repository</a>
+    <a [href]="data.repository_back" target="_blank" class="architects-projects-modal__link" *ngIf="data.repository_back">Backend services - repository</a>
+    <a [href]="data.url" target="_blank" class="architects-projects-modal__link">{{data.name}} - website</a>
  </main>
