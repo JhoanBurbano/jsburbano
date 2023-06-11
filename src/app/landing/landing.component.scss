@@ -19,8 +19,12 @@
 @media screen and (max-width: 850px) {
     .app-landing{
         position: relative;
+        min-height: 100vh;
+        &_outlet {
+            margin: auto;
+        }
         &__app-navbar{
-            position: absolute;
+            position: fixed;
             transform: translateY(-100vh);
             z-index: 100;
             top: 0;

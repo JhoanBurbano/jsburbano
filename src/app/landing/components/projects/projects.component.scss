@@ -127,7 +127,8 @@
 @media screen and (max-width: 1200px) {
     .app-projects {
         &__container {
-            width: 500px;
+            min-width: 500px;
+            width: 80%;
             &-button {
                order: 4;
                margin-top: 2em;

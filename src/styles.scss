@@ -55,7 +55,7 @@ p, b, a {
 
 html {
   background-color: $gray;
-  font-size: 16px;
+  font-size: 15px;
   color: $white;
   font-family: $paragraph;
   font-weight: 100;
@@ -74,54 +74,57 @@ html {
 }
 
 .tra-barsin {
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  &::after {
-    content: "";
-    height: 50%;
-    width: $navbar-width;
-    background-color: $black_o;
-    position: absolute;
-    order: -1;
-    bottom: 0;
-    opacity: 1;
-    transform: translate($navbar-width);
-    transition: transform 0.3s cubic-bezier(0.65, 0.15, 0, 1);
-  }
-  &::before {
-    content: "";
-    height: 50%;
-    width: $navbar-width;
-    background-color: $black_o;
-    position: absolute;
-    order: -1;
-    top: 0;
-    opacity: 1;
-    transform: translate(-$navbar-width);
-    transition: transform 0.3s cubic-bezier(0.65, 0.15, 0, 1);
-  }
-  &:hover {
-    &::before {
-      opacity: 1;
-      transform: translate(0);
-      // animation: onBarRigth .3s linear 0s;
-    }
+  @media (min-width: 851px) {
+
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     &::after {
+      content: "";
+      height: 50%;
+      width: $navbar-width;
+      background-color: $black_o;
+      position: absolute;
+      order: -1;
+      bottom: 0;
       opacity: 1;
-      transform: translate(0);
-      // animation: onBarLeft .3s linear 0s;
+      transform: translate($navbar-width);
+      transition: transform 0.3s cubic-bezier(0.65, 0.15, 0, 1);
+    }
+    &::before {
+      content: "";
+      height: 50%;
+      width: $navbar-width;
+      background-color: $black_o;
+      position: absolute;
+      order: -1;
+      top: 0;
+      opacity: 1;
+      transform: translate(-$navbar-width);
+      transition: transform 0.3s cubic-bezier(0.65, 0.15, 0, 1);
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: translate(0);
+        // animation: onBarRigth .3s linear 0s;
+      }
+      &::after {
+        opacity: 1;
+        transform: translate(0);
+        // animation: onBarLeft .3s linear 0s;
+      }
+      & p {
+        color: $green;
+      }
     }
     & p {
-      color: $green;
-    }
+      z-index: 1;
   }
-  & p {
-    z-index: 1;
-  }
+}
 }
 
 .font-s {

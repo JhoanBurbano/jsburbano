@@ -8,9 +8,16 @@
     justify-content: center;
     align-items: center;
     &__container {
-        // animation: opacityIn .5s linear 0s;
+        min-width: 300px;
+        max-width: 600px;
+        width: 100%;
+        @media (max-width: 1250px) {
+            width: 80%;
+        }
+        @media (max-width: 850px) {
+            width: 100%;
+        }
         &-text {
-            width: 600px;
             height: 600px;
             background-color: $gray_d;
             text-align: justify;
@@ -39,16 +46,6 @@
                 color: $green;
                 width: 80%;
                 margin: 0 auto;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .app-about {
-        &__container {
-            &-text {
-                width: 500px;
             }
         }
     }

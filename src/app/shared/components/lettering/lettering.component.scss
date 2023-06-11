@@ -29,6 +29,9 @@
     margin-bottom: 40px;
     width: 80%;
     margin: 0 auto;
+    @media (max-width: 850px) {
+       font-size: 18px!important;
+    }
     &__letter {
         font-size: 2.5em;
         animation-name: rubberBand;

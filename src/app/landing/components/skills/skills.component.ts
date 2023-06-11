@@ -29,7 +29,7 @@ export class SkillsComponent implements OnInit {
   public paragraphs: Array<string>;
   public pageActive: 'notes' | 'description';
   public tabs: Array<string>;
-  public template: Record<string, any>;
+  public template!: Record<string, any>;
   public tabActive: string;
   @ViewChild('notes') notes: ElementRef;
 
@@ -45,16 +45,14 @@ export class SkillsComponent implements OnInit {
         this.paragraphs = template.paragraphs;
         this.tabs = template.skills.map((set) => set.tab);
         this.setTab(this.tabs[0]);
-        if(window.innerWidth <= 1200){
-          this.pageActive = 'notes'
-        }
+        this.onResize()
         this.ui$.stopLoading()
       });
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if(event.target.innerWidth <= 1200 ){
+  onResize() {
+    if(window.innerWidth <= 1380 ){
       this.pageActive = 'notes'
     }
   }

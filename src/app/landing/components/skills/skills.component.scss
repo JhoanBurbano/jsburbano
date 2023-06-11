@@ -11,13 +11,14 @@
     min-width: 550px;
     display: flex;
     justify-content: center;
+    overflow: auto;
     &-next {
       display: none;
     }
     &-art {
       direction: rtl;
       width: 550px;
-      height: 720px;
+      max-height: 600px;
       background-color: $gray_d;
       text-align: justify;
       padding: 20px;
@@ -28,8 +29,9 @@
       &:nth-child(2) {
         background: $gray;
         padding: 10px;
-        overflow: hidden;
+        overflow: auto;
         position: relative;
+        border: 2px solid $gray_d;
       }
       & > * {
         direction: ltr;
@@ -249,7 +251,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1380px) {
   .app-skills {
     justify-content: center;
     &__container {

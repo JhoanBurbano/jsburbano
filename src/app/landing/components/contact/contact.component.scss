@@ -8,7 +8,7 @@
     justify-content: center;
     &__container {
         width: 700px;
-        height: 700px;
+        max-height: 600px;
         background: $gray_d;
         border-radius: 8px;
         box-shadow: 0 0 20px $black_o;
@@ -17,7 +17,7 @@
             text-align: center;
         }
         &-form {
-            height: 30em;
+            max-height: 400px;
             background-color: $gray_d;
             padding: 20px;
             display: grid;

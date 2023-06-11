@@ -5,16 +5,33 @@
     height: $full-height;
     max-width: $navbar-width;
     box-shadow: 5px 0 30px $black_t;
+    @media (max-width: 850px) {
+    box-shadow: none;
+    max-width: 850px;
+    min-width: 300px;
+    width: 100vw;
+    }
     position: sticky;
+    top: 0;
     transition: transform .3s linear;
     &__profile{
         position: relative;
         margin-bottom: 20px;
         cursor: pointer;
         overflow: hidden;
+        @media (max-width: 850px){
+            width: max-content;
+            margin: auto;
+        }
         &-img{
             width: $navbar-width;
             transition: transform .2s linear;
+            @media (max-width: 850px){
+                max-width: 300px;
+                width: 100%;
+            border-radius: 50%;
+
+            }
             &:hover {
                 transform: scale(1.05)
             }
@@ -30,6 +47,7 @@
         &-option {
             border-top: 1px solid $gray_l;
             padding: 20px 0;
+            text-align: center;
             &-title{
                 text-align: center;
                 color: $gray_l;
