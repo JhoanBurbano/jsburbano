@@ -1,0 +1,44 @@
+@import '../../../../variables.scss';
+.architects-projects-modal {
+    background-color: $gray_d;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    &__img {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+    }
+    &__description {
+        text-align: justify;
+    }
+    &__skills {
+        &-title {
+            color: $green;
+            text-align: center;
+        }
+        &-skill {
+            display: inline-block;
+            padding: 2.5px;
+            margin: 3px;
+            color: $green;
+            background: $black;
+            border-radius: 3px;
+        }
+    }
+    &__link {
+        color: $blue;
+        & mat-icon {
+            transform: scale(.8);
+            position: relative;
+            bottom: -5px;
+            color: white;
+        }
+    }
+}

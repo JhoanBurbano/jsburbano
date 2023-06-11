@@ -17,6 +17,7 @@ import { DocumentsComponent } from './components/documents/documents.component';
 import { GalleryNotesComponent } from './components/gallery-notes/gallery-notes.component';
 import { SafePipe } from '../pipes/safe.pipe';
 import { MatIconModule } from '@angular/material/icon';
+import  { MatDialogModule } from '@angular/material/dialog'
 import { UiService } from './services/ui.service';
 import { LandingService } from './services/landing.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +26,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoaderComponent } from './components/loader/loader.component';
 import { SharedModule } from '../shared/shared.module';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     GalleryNotesComponent,
     LoaderComponent,
     SafePipe,
+    ProjectModalComponent,
   ],
   imports: [
     CommonModule,
@@ -53,6 +56,7 @@ import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
     ToastrModule.forRoot(),
     SharedModule,
     NgxExtendedPdfViewerModule,
+    MatDialogModule,
   ],
   exports: [
     NavbarComponent

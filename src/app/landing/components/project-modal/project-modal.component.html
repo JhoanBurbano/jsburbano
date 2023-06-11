@@ -1,0 +1,24 @@
+<!-- <a [href]="project.url" target="_blank">
+    <app-lettering [subtitle]="project.name" size="s"></app-lettering>
+</a>
+<p *ngFor="let skill of project.skills">{{skill}}</p>
+ -->
+
+ <main class="architects-projects-modal" *ngIf="data">
+    <span class="architects-projects-modal__close">
+        <mat-icon mat-dialog-close>close</mat-icon>
+    </span>
+    <app-lettering [subtitle]="data.name"></app-lettering>
+    <img class="architects-projects-modal__img" [src]="data.image" alt="">
+    <p class="architects-projects-modal__description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, sequi rem. Molestiae deserunt voluptatum nulla excepturi cumque, molestias dignissimos numquam dolorum odio quia iste rem illum aliquam non ut? Accusantium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quasi, corporis sint, iste aliquam ratione numquam optio quia sed nihil.
+    </p>
+    <main class="architects-projects-modal__skills">
+        <h4 class="architects-projects-modal__skills-title">Skills</h4>
+        <p class="architects-projects-modal__skills-skill" *ngFor="let skill of data.skills">
+            {{skill}}
+        </p>
+    </main>
+    <a [href]="data.url" target="_blank" class="architects-projects-modal__link"><app-icon icon="github"></app-icon>{{data.name}} - repository</a>
+    <a [href]="data.repository" target="_blank" class="architects-projects-modal__link"><mat-icon>public</mat-icon>{{data.name}} - website</a>
+ </main>
