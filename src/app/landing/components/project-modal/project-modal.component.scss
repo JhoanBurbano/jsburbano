@@ -4,6 +4,10 @@
     width: 100%;
     padding: 20px;
     position: relative;
+    height: 90vh;
+    min-height: 500px;
+    max-height: 700px;
+    overflow-y: auto;
     &__close {
         position: absolute;
         top: 10px;
