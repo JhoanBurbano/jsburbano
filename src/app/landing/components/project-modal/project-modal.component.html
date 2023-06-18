@@ -5,7 +5,7 @@
     <app-lettering [subtitle]="data.name"></app-lettering>
     <img class="architects-projects-modal__img" [src]="data.image" alt="">
     <p class="architects-projects-modal__description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, sequi rem. Molestiae deserunt voluptatum nulla excepturi cumque, molestias dignissimos numquam dolorum odio quia iste rem illum aliquam non ut? Accusantium?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quasi, corporis sint, iste aliquam ratione numquam optio quia sed nihil.
+        {{data.description}}
     </p>
     <main class="architects-projects-modal__skills">
         <h4 class="architects-projects-modal__skills-title">Skills</h4>
@@ -13,7 +13,7 @@
             {{skill}}
         </p>
     </main>
-    <a [href]="data.repository" target="_blank" class="architects-projects-modal__link">Forntend - repository</a>
-    <a [href]="data.repository_back" target="_blank" class="architects-projects-modal__link" *ngIf="data.repository_back">Backend services - repository</a>
-    <a [href]="data.url" target="_blank" class="architects-projects-modal__link">{{data.name}} - website</a>
+    <a tabindex="-1" [href]="data.repository" target="_blank" class="architects-projects-modal__link">{{data.repository_back ? 'Forntend' : 'App'}} - repository</a>
+    <a tabindex="-1" [href]="data.repository_back" target="_blank" class="architects-projects-modal__link" *ngIf="data.repository_back">Backend services - repository</a>
+    <a tabindex="-1" [href]="data.url" target="_blank" class="architects-projects-modal__link">{{data.name}} - website</a>
  </main>
