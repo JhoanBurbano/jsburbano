@@ -1,4 +1,4 @@
-<div class="app-cover-letter">
+<div class="app-cover-letter" [style.background-image]="'url('+ template['background'] +')'">
     <h2 class="app-cover-letter__title">{{template['title']}}</h2>
     <p class="app-cover-letter__content">
         <span *ngFor="let paragraph of template['paragraphs']">

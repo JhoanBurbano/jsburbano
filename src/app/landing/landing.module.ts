@@ -42,7 +42,6 @@ import { ProjectModalComponent } from './components/project-modal/project-modal.
     DocumentsComponent,
     GalleryNotesComponent,
     LoaderComponent,
-    SafePipe,
     ProjectModalComponent,
   ],
   imports: [

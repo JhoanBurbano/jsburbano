@@ -62,9 +62,10 @@ export class ContactComponent implements OnInit {
 
   hasErrors() {
     let controls = this.formControl.controls;
-    console.log('this.formControl', this.formControl.controls, controls);
+    console.log('this.formControl', controls);
     for (let control in controls) {
-      if (Object.keys(controls[control].errors)) {
+      console.log('control :>> ', control);
+      if (Object.keys(controls?.[control]?.errors || {})) {
       }
     }
   }

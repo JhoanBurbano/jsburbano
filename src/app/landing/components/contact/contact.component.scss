@@ -47,6 +47,7 @@
                     font-family: 'Manrope'!important;
                     grid-column: 1 / span 2;
                     padding: .5em;
+                    resize: none;
                 }
                 &.error {
                     border-color: $red;

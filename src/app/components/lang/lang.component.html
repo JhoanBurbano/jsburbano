@@ -1,0 +1,9 @@
+<div class="app-lang">
+    <span class="app-lang__icon" (click)="toggleShow()">
+        <mat-icon>g_translate</mat-icon>
+    </span>
+    <span class="app-lang__drop" *ngIf="show">
+        <p class="app-lang__drop-option" (click)="toggleLang('es')">ES</p>
+        <p class="app-lang__drop-option" (click)="toggleLang('en')">EN</p>
+    </span>
+</div>

@@ -25,43 +25,43 @@
                 </div>
           </div>
           <div class="skills">
-            <h3>Skills</h3>
+            <h3>{{template['sections']?.[0] || 'Skills'}}</h3>
             <a class="app-item" *ngFor="let item of data['skills']">{{item}}</a>
           </div>
           <div class="langs">
-            <h3>Langs</h3>
+            <h3>{{template['sections']?.[1] || 'Langs'}}</h3>
             <a class="app-item" *ngFor="let item of data['langs']">{{item}}</a>
           </div>
           <div class="hobbies">
-            <h3>Hobbies & Preferences</h3>
+            <h3>{{template['sections']?.[2] || 'Hobbies & Preferences'}}</h3>
             <a class="app-item" *ngFor="let item of data['hobbies']">{{item}}</a>
           </div>
         </div>
         <div class="right">
           <div class="intro">
-            <h3>About Me</h3>
+            <h3>{{template['sections']?.[3] || 'About Me'}}</h3>
             <section
               class="about"
-              [innerHTML]="data.about"
+              [innerHTML]="data.about | safe: 'html'"
             ></section>
           </div>
           <div class="experience">
-            <h3>Work Experience</h3>
+            <h3>{{template['sections']?.[4] || 'Work Experience'}}</h3>
             <div class="app-card" *ngFor="let item of data['experience']">
                 <h4>{{item.title}}</h4>
                 <p>{{item.enterprise + ' | ' +item.year}}</p>
                 <b
-                [innerHTML]="item.description"
+                [innerHTML]="item.description | safe: 'html'"
                 ></b>
             </div>
           </div>
           <div class="academic">
-            <h3>Academic Formation</h3>
+            <h3>{{template['sections']?.[5] || 'Academic Formation'}}</h3>
             <div class="app-card" *ngFor="let item of data['academic']">
                 <h4>{{item.title}}</h4>
                 <p>{{item.school + ' | ' +item.year}}</p>
                 <b
-                [innerHTML]="item.description"
+                [innerHTML]="item.description | safe: 'html'"
                 ></b>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { CurriculumComponent } from './components/curriculum/curriculum.componen
 import { MatIconModule } from '@angular/material/icon';
 import { IconComponent } from './components/atoms/icon/icon.component';
 import { CoverLetterComponent } from './components/cover-letter/cover-letter.component';
+import { SafePipe } from '../pipes/safe.pipe';
 
 
 
@@ -15,6 +16,7 @@ import { CoverLetterComponent } from './components/cover-letter/cover-letter.com
     CurriculumComponent,
     IconComponent,
     CoverLetterComponent,
+    SafePipe
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { CoverLetterComponent } from './components/cover-letter/cover-letter.com
     CurriculumComponent,
     IconComponent,
     CoverLetterComponent,
+    SafePipe,
   ]
 })
 export class SharedModule { }
