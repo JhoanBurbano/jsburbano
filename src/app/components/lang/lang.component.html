@@ -3,7 +3,7 @@
         <mat-icon>g_translate</mat-icon>
     </span>
     <span class="app-lang__drop" *ngIf="show">
-        <p class="app-lang__drop-option" (click)="toggleLang('es')">ES</p>
-        <p class="app-lang__drop-option" (click)="toggleLang('en')">EN</p>
+        <p class="app-lang__drop-option" [ngClass]="{'green': 'es' === lang}" (click)="toggleLang('es')">ES</p>
+        <p class="app-lang__drop-option" [ngClass]="{'green': 'en' === lang}" (click)="toggleLang('en')">EN</p>
     </span>
 </div>

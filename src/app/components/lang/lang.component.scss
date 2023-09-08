@@ -51,3 +51,16 @@
         }
       }
 }
+
+.green {
+  color: $green;
+  &:is(p) {
+    font-weight: 300;
+  }
+  & * {
+    color: $green;
+  }
+  & *::-webkit-slider-thumb {
+    background: $green !important;
+  }
+}
