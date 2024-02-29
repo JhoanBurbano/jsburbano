@@ -183,3 +183,15 @@
     text-shadow: -5px 0 0 $green;
   }
 }
+
+@keyframes loader {
+  0% {
+    transform: translate(-10%);
+  }
+  50% {
+    transform: translate(160%);
+  }
+  100% {
+    transform: translate(-10%);
+  }
+}

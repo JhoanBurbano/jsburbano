@@ -17,8 +17,9 @@
         }
         &-mainletter {
             color: $red;
-            text-shadow: -5px 0 0 $green;
+            text-shadow: -5px 0 0 $red_dark;
             animation: rotate .3s linear;
+            transform: rotate(5deg);
         }
     }
 }

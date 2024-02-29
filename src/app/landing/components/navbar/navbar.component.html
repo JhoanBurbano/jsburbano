@@ -5,7 +5,7 @@
     [title]="template.title"
     *ngIf="template"
   >
-    <img [src]="user.image | safe:'url'" alt="" class="app-navbar__profile-img" />
+    <img [src]="user.image | safe:'url'" alt="" class="app-navbar__profile-img" loading="lazy"/>
     <p class="app-navbar__profile-name bg-opacity ani-fadein">
       {{ user.name }}
     </p>
